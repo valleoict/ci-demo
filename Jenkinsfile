@@ -8,7 +8,6 @@ pipeline{
         stage('init'){
             steps{
                 script{
-					cleanWs()
                     println("Hello world")
                 }
             }
@@ -26,6 +25,8 @@ pipeline{
 				script{
 					dir('maven_project'){
 					sh 'mvn test' 
+					
+					cleanWs()
 					}
 				}
             }
