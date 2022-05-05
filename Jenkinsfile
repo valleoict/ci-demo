@@ -8,6 +8,7 @@ pipeline{
         stage('init'){
             steps{
                 script{
+					cleanWs()
                     println("Hello world")
                 }
             }
