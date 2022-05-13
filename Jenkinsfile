@@ -42,4 +42,12 @@ pipeline{
             }
         }
     }
+   post{
+        always{
+                script{  
+                    echo  '''this is always executed '''
+		    cleanWs()
+            }
+        }
+    }
 }
